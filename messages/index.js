@@ -53,10 +53,6 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
 /*
 .matches('<yourIntent>')... See details at http://docs.botframework.com/builder/node/guides/understanding-natural-language/
 */
-.matches('weather', (session, args) => {
-    session.send('its probably snowing!')
-    session.send(JSON.stringify(args)) // this is used to show you what LUIS things - shows % chance of all intents
-})
 .onDefault((session) => {
     session.send('Sorry, I did not understand \'%s\'.', session.message.text);
 });
